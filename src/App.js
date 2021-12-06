@@ -14,16 +14,16 @@ import axios from 'axios';
 
 
 function App() {
-
+  const [name, setName] = useState('')
   const [question, setQuestion] = useState()
-  const [result, setResult] = useState(0)
+  const [result, setResult] = useState(0);
   const [category, setCategory] = useState("");
   const [difficulty, setDifficulty] = useState("");
 
-  const fetchQuestion = async (difficulty = '', category = '') => {
-    const { data } = await axios.get(`https://opentdb.com/api.php?amount=10${category && `&category=${category}`}${difficulty && `&difficulty=${difficulty}`}&type=multiple`);
 
-    console.log(data);
+  const fetchQuestion = async (difficulty = '', category = '') => {
+    const { data } = await axios.get(`https://opentdb.com/api.php?amount=10`);
+    setQuestion(data.results);
   };
   return (
     <div className="app" style={{ backgroundImage: "url(./ques1.png)" }}>
@@ -32,8 +32,22 @@ function App() {
         <Header></Header>
         <Routes>
 
-          <Route path="/" element={<Home fetchQuestion={fetchQuestion} />}> </Route>
-          <Route path="quiz" element={<Quiz />}> </Route>
+          <Route path="/" element={<Home
+            name={name}
+            fetchQuestion={fetchQuestion}
+            setName={setName}
+          />}>
+          </Route>
+
+          <Route path="quiz" element={<Quiz
+            result={result}
+            setResult={setResult}
+            question={question}
+            setQuestion={setQuestion}
+            name={name}
+
+          />}> </Route>
+
           <Route path="result" element={<Result />}> </Route>
 
         </Routes>

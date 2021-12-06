@@ -1,10 +1,10 @@
 import { Grid, Box, TextField, MenuItem, Button, FormControl, Select, InputLabel } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Categories from '../../Data/Categories'
 import { useNavigate } from 'react-router-dom';
 
-const Home = ({ fetchQuestion }) => {
-    const [name, setName] = useState('')
+const Home = ({ name, setName, fetchQuestion }) => {
+
     const [category, setCategory] = useState("");
     const [difficulty, setDifficulty] = useState("");
     const [error, setError] = useState(false);
@@ -14,7 +14,7 @@ const Home = ({ fetchQuestion }) => {
 
     const handleSubmit = () => {
         if (!difficulty || !category || !name) {
-            setError(true)
+            setError(true);
         }
         else {
             setError(false)
