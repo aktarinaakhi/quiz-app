@@ -19,7 +19,7 @@ const Quiz = ({ name, question, setQuestion, result, setResult }) => {
             handleExchange([question[currentQuestion]?.correct_answer, ...question[currentQuestion]?.incorrect_answers])
         )
 
-    }, [question]);
+    }, [question, currentQuestion]);
 
     console.log(question)
 

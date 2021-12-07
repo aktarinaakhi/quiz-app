@@ -1,0 +1,16 @@
+.select {
+  background-color: green;
+  color: white;
+}
+.wrong {
+  background-color: tomato;
+  color: white;
+}
+.singleOption {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 30px;
+  padding: 15px;
+}

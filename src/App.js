@@ -48,7 +48,7 @@ function App() {
 
           />}> </Route>
 
-          <Route path="result" element={<Result />}> </Route>
+          <Route path="result" element={<Result result={result} />}> </Route>
 
         </Routes>
         <Footer></Footer>
