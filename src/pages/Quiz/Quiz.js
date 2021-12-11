@@ -24,13 +24,13 @@ const Quiz = ({ name, question, setQuestion, result, setResult }) => {
     console.log(question)
 
     return (
-        <div style={{ margin: '50px' }}>
-            <span>Welcome {name}</span>
+        <div style={{ margin: '5rem' }}>
+            <span style={{ fontSize: '5rem' }}>Welcome {name}</span>
             {
                 question ? (
                     <>
-                        <h1> {question[currentQuestion].category}</h1>
-                        <span>Score : {result}</span>
+                        <h1> Topics:  {question[currentQuestion].category}</h1>
+                        <span style={{ fontSize: '2rem' }}>Score : {result}</span>
 
                         <Questions
                             result={result}

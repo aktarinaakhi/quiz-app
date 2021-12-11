@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <h4>All reserved by aktarina akhi</h4>
+            <h4 style={{ marginTop: '2rem' }}>All reserved by aktarina akhi</h4>
         </div>
     );
 };

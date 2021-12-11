@@ -46,18 +46,18 @@ const Questions = ({ result, setResult, question, setQuestion, currentQuestion, 
         }
     }
     return (
-        <Container>
-            <h2 style={{ textAlign: 'center', marginBottom: '10px' }}>questions : {currentQuestion + 1}</h2>
-            <div style={{ border: '3px solid gray', padding: '30px' }}>
+        <Container style={{ textAlign: 'center' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>questions : {currentQuestion + 1}</h2>
+            <div style={{ border: '3px solid gray', padding: '2rem' }}>
                 <h2 style={{ textAlign: 'center' }}>{question[currentQuestion].question}</h2>
 
-                {error && <span style={{ color: 'red' }}> wrong</span>}
+                {error && <span style={{ color: 'red' }}> Select one option</span>}
 
-                <div style={{ marginTop: '30px', textAlign: 'center' }}>
+                <div style={{ marginTop: '4rem', display: 'flex', flexDirection: 'column', width: '50%', margin: 'auto', marginBottom: '3rem' }}>
 
                     {options && options.map(topics => <button
                         onClick={() => handleCheck(topics)}
-                        style={{ marginLeft: '40px', padding: '15px', marginBottom: '20px' }}
+                        style={{ marginLeft: '3rem', padding: '1rem', marginBottom: '1rem' }}
                         key={topics}
 
                         className={`singleOption ${selected && handleSelect(topics)}`}
@@ -66,9 +66,9 @@ const Questions = ({ result, setResult, question, setQuestion, currentQuestion, 
                         {topics}</button>)}
                 </div>
 
-                <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                <div style={{ textAlign: 'center', marginTop: '1rem' }}>
                     <Button
-                        style={{ marginRight: '20px' }}
+                        style={{ marginRight: '2rem' }}
                         variant="contained"
                         color="warning"
                         onClick={handleQuit}

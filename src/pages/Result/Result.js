@@ -7,10 +7,10 @@ const Result = ({ result }) => {
     return (
         <Container>
             <div>
-                <h2>Your Score: {result}</h2>
+                <h2 style={{ fontSize: '3rem', margin: '2rem 0' }}>Your Score: {result}</h2>
 
                 <Link to='/'>
-                    <Button>Go to the home page</Button>
+                    <Button style={{ fontSize: '2rem', marginBottom: '18rem' }}>Go to the home page</Button>
                 </Link>
             </div>
         </Container>

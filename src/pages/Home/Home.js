@@ -52,6 +52,7 @@ const Home = ({ name, setName, fetchQuestion }) => {
                                     value={category}
                                     onChange={e => setCategory(e.target.value)}
                                     label="Age"
+                                    style={{ textAlign: 'left' }}
                                 >
                                     {
                                         Categories.map(cat => <MenuItem key={cat.value} value={cat.value}>{cat.category}</MenuItem>)
@@ -68,7 +69,7 @@ const Home = ({ name, setName, fetchQuestion }) => {
                                     id="demo-simple-select-standard"
                                     value={difficulty}
                                     onChange={e => setDifficulty(e.target.value)}
-
+                                    style={{ textAlign: 'left' }}
                                     label="Select difficulty"
                                 >
 
